@@ -8,4 +8,14 @@ public class Test {
     String description;
     String pathToImage;
     Question[] questions = new Question[20];
+
+
+    public void addQuestion(Question question) {
+        for (int i = 0; i < questions.length; i++){
+            if(questions[i] == null){
+                questions[i] = question;
+                break;
+            }
+        }
+    }
 }
