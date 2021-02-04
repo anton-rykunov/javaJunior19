@@ -56,5 +56,4 @@ public class InitSaper {
             addMine(field);
         }
     }
-
 }
