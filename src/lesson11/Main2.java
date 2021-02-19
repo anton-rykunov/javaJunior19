@@ -17,8 +17,8 @@ public class Main2 {
         animals[3] = elephant2;
         animals[4] = mancey1;
         animals[5] = mancey2;
-        for (ZooAnimal carent:animals){
-            carent.voice();// полиморфизм
+        for (ZooAnimal zoo:animals){
+            zoo.voice();// полиморфизм
         }
     }
 }
