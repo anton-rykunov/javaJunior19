@@ -1,9 +1,6 @@
 package lesson14;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,5 +21,11 @@ public class Main {
         System.out.println(result);
         Collection<Integer> dif = utils.difference(nums1,nums2);
         System.out.println(dif);
+        Collection<Integer> result1 = utils.intersection(nums1, nums2);
+        System.out.println(result1);
+        Set<Integer> result2 = utils.unionWithoutDuplicate(nums1, nums2);
+        System.out.println(result2);
+        Set<Integer> result3 = utils.intersectionWithoutDuplicate(nums1,nums2);
+        System.out.println(result3);
     }
 }

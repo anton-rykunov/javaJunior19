@@ -2,8 +2,9 @@ package lesson14;
 
 import java.util.Objects;
 
-public class Coin {
-   private int diametr;
+public class Coin implements Comparable<Coin> {
+
+    private int diametr;
     private int nominal;
     private int yaer;
     private String matal;
@@ -72,5 +73,22 @@ public class Coin {
                 ", год выпуска=" + yaer +
                 ", металл='" + matal + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Coin o) {
+        int returnValue = 0;
+        if (this.getDiametr() != o.getDiametr()) {
+            returnValue = o.getDiametr() - this.getDiametr();
+
+        } else if (returnValue == 0 && this.getNominal() != o.getNominal()) {
+            returnValue = o.getNominal() - this.getNominal();
+        } else if (returnValue == 0 && this.getYaer() != o.getYaer()) {
+            returnValue = o.getYaer() - this.getYaer();
+        } else {
+            returnValue = o.getMatal().compareTo(this.getMatal());
+        }
+        return returnValue;
+
     }
 }
